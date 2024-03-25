@@ -85,7 +85,7 @@ export class WebAppConfig extends Construct {
       entry: path.join(__dirname, '../', 'lambda', 'upload-config', 'index.js'),
       handler: 'handler',
       timeout: Duration.seconds(10),
-      runtime: lambda.Runtime.NODEJS_14_X,
+      runtime: lambda.Runtime.NODEJS_LATEST,
     });
 
     props.bucket.grantReadWrite(uploadConfigLambda);
